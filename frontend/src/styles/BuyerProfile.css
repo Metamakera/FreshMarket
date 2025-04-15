@@ -1,0 +1,14 @@
+.buyer-profile {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .buyer-profile h2 {
+    color: navy;
+  }
+  
+  .buyer-profile p {
+    font-size: 1.2rem;
+    color: darkgray;
+  }
+  

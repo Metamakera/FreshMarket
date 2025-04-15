@@ -1,0 +1,14 @@
+.seller-products {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .seller-products h2 {
+    color: darkred;
+  }
+  
+  .seller-products p {
+    font-size: 1.1rem;
+    color: gray;
+  }
+  

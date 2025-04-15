@@ -1,0 +1,14 @@
+.seller-orders {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .seller-orders h2 {
+    color: darkred;
+  }
+  
+  .seller-orders p {
+    font-size: 1.1rem;
+    color: gray;
+  }
+  

@@ -1,0 +1,221 @@
+/* Full Page Styling */
+.searched-product-container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 40px 5%;
+  background-color: #f8f8f8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.searched-product-container h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Category Buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  transition: background 0.3s ease-in-out;
+}
+
+.category-btn:hover {
+  background: #0056b3;
+}
+
+.category-btn.active {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* 🛍️ Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 products per row */
+  gap: 20px;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+/* 🏷️ Product Card */
+.product-card {
+  background: white;
+  border: 1px solid #ccc; /* Light Grey Border */
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-color: #007bff; /* Highlight border on hover */
+}
+
+/* 🖼️ Product Image */
+.product-image {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f0f0f0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  /* filter: grayscale(100%); */
+}
+
+/* 🔍 Hover Effect */
+.product-card:hover .product-image img {
+  transform: scale(1.1);
+  filter: grayscale(0);
+}
+
+/* 🏷️ Product Details */
+.product-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #222;
+  margin-top: 10px;
+}
+
+.product-price {
+  font-size: 1em;
+  color: rgb(0, 42, 157);
+  border-radius: 6px;
+  padding: 6px 12px;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* No Products Message */
+.no-products {
+  font-size: 1em;
+  color: #888;
+  text-align: center;
+  width: 100%;
+}
+
+/* 🔄 Loading Animation */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+  }
+  
+/* From Uiverse.io by bociKond */ 
+.circle{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:150px;
+    height:150px;
+    background:#ccc;
+    border:5px solid #fff;
+    box-shadow:0 0 0 5px #4973ff;
+    border-radius:50%;
+    overflow:hidden;
+  }
+  .wave{
+    position:relative;
+    width:100%;
+    height:100%;
+    background:#4973ff;
+    border-radius:50%;
+    box-shadow:inset 0 0 50px rgba(0,0,0,.5);
+  }
+  .wave:before,.wave:after{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:200%;
+    top:0;
+    left:50%;
+    transform:translate(-50%,-75%);
+    background:#000;
+  }
+  .wave:before{
+    border-radius:45%;
+    background:rgba(255,255,255,1);
+    animation:animate 5s linear infinite;
+  }
+  .wave:after{
+    border-radius:40%;
+    background:rgba(255,255,255,.5);
+    animation:animate 10s linear infinite;
+  }
+  @keyframes animate{
+    0%{
+       transform:translate(-50%,-75%) rotate(0deg);
+    }
+    100%{
+       transform:translate(-50%,-75%) rotate(360deg);
+    }
+  }
+
+/* 📱 Responsive Design */
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  }
+}
+
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 per row */
+  }
+}

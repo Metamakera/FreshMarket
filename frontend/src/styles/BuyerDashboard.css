@@ -1,0 +1,24 @@
+.buyer-dashboard {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .buyer-dashboard ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .buyer-dashboard li {
+    margin: 10px 0;
+  }
+  
+  .buyer-dashboard a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: darkblue;
+  }
+  
+  .buyer-dashboard a:hover {
+    text-decoration: underline;
+  }
+  

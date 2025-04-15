@@ -1,0 +1,531 @@
+/* General Layout for the Header */
+.fish-header {
+  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+/* Top Header */
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #001b1c, #192222);
+}
+
+.logo-area .logo {
+  height: 60px;
+}
+
+/* Search Bar */
+.search-bar {
+  flex: 1;
+  margin: 0 30px;
+  display: flex;
+  max-width: 800px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-btn {
+  padding: 12px 20px;
+  background-color: #4CD7D0;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Right Icons */
+.right-icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+}
+
+.icon-button svg {
+  font-size: 20px;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #f89c1d;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  background: linear-gradient(135deg, #001b1c, #4cd7d0);
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a,
+.cat-toggle {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.cat-toggle:hover {
+  color: #f89c1d;
+}
+
+/* Hoverable Dropdown - SHOP ALL SEAFOOD */
+.cat-dropdown:hover .cat-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.cat-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: none;
+  opacity: 0;
+  transform: translateY(12px) translateX(-300px); /* Adjust both X and Y at the same time */
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+  min-width: 260px;
+  padding: 12px 0;
+  border: 1px solid #222;
+  line-height: 30px;
+}
+/* Category Submenu Toggle */
+.cat-submenu-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-submenu-toggle {
+  color: white;
+  padding: 10px 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.cat-submenu-toggle:hover {
+  background-color: #222;
+}
+
+/* Submenu Dropdown */
+.cat-submenu {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+  border-radius: 0 0 6px 6px;
+  padding: 0;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.cat-submenu.show {
+  max-height: 300px;
+  padding: 10px 0;
+}
+
+/* Category Items */
+.cat-item {
+  padding: 8px 20px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.cat-item:hover,
+.cat-item.selected {
+  background-color: #4CD7D0;
+  color: #000;
+}
+
+.cat-item input {
+  display: none;
+}
+
+/* User Avatar Icon */
+.user-icon {
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+/* ABOUT US Dropdown */
+.about-dropdown {
+  position: relative;
+}
+
+.about-toggle {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.about-toggle:hover {
+  color: #f89c1d;
+}
+
+/* ABOUT US Menu */
+.about-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+  min-width: 220px;
+  padding: 12px 0;
+  border: 1px solid #222;
+}
+
+.about-dropdown:hover .about-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Menu Items */
+.about-menu li  {
+  padding: 8px 16px!important;
+  color: white!important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+.about-menu li button{
+  padding: 8px 16px!important;
+  color: white!important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.about-menu li:hover {
+  background-color: #4cd7d0;
+  color: #000;
+}
+.button:hover {
+  background-color: #4cd7d0;
+  color: #000;
+}
+.price-filter {
+  padding: 8px 16px;
+  color: white;
+}
+
+.price-filter summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: bold;
+}
+
+.price-range {
+  padding: 10px 0;
+}
+
+.price-range .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.price-range input[type="number"] {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.range-slider {
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  outline: none;
+  margin: 5px 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: orange;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 4px;
+  color: white;
+}
+.recipes-dropdown {
+  position: relative;
+}
+
+.recipes-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 5px;
+  color: white;
+}
+
+.recipes-menu {
+  position: absolute;
+  background-color: #102c3d;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  z-index: 10;
+  min-width: 220px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipes-dropdown:hover .recipes-menu {
+  display: block;
+}
+
+.recipes-menu li {
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.recipes-menu li:hover {
+  background-color: #4cd7d0;
+  color: #000;
+}
+/* USER PROFILE DROPDOWN */
+.user-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-icon {
+  background: linear-gradient(135deg, #4cd7d0, #0a9ba0);
+  color: white;
+  font-weight: 600;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(76, 215, 208, 0.4),
+              0 0 0 2px #ffffff60;
+  border: 2px solid #ffffff40;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-icon:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 6px 16px rgba(76, 215, 208, 0.5),
+              0 0 0 3px #ffffff80;
+}
+
+/* Optional floating glow animation */
+@keyframes float-glow {
+  0% {
+    box-shadow: 0 4px 12px rgba(76, 215, 208, 0.4),
+                0 0 0 2px #ffffff60;
+  }
+  50% {
+    box-shadow: 0 6px 18px rgba(76, 215, 208, 0.6),
+                0 0 6px #4cd7d0;
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(76, 215, 208, 0.4),
+                0 0 0 2px #ffffff60;
+  }
+}
+
+.user-icon.animated {
+  animation: float-glow 3s infinite ease-in-out;
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: #102c3d;
+  border-radius: 0 0 8px 8px;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+  padding: 10px 16px;
+  text-align: left;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background-color: #4cd7d0;
+  color: #000;
+}
+.search-input-container {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 18px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px; /* Adjusted for icon */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-btn {
+  display: none; /* Optional: Hide the button if icon handles search */
+}
+.nav-links li a, .nav-links li span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+}
+
+.icon-button.improved-signin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #4cd7d0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-button.improved-signin:hover {
+  background-color: #2baaa1; /* Darker teal on hover */
+}

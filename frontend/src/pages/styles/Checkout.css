@@ -1,0 +1,330 @@
+/* ===========================
+   Global Styles
+=========================== */
+.checkout-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ===========================
+   Header & Titles
+=========================== */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 25px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* ===========================
+   Layout Structuring
+=========================== */
+.checkout-top-section {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.checkout-section {
+  flex: 1;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ===========================
+   Login Section with Image
+=========================== */
+.login-section {
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+.login-image {
+  width: 50%;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInScale 0.7s ease-in-out;
+}
+
+.login-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  transform: scale(1.05);
+}
+
+.logged-in-status {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.9s ease-in-out;
+}
+
+/* ===========================
+   Animations
+=========================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 1024px) {
+  .checkout-top-section {
+    flex-direction: column;
+  }
+
+  .checkout-section {
+    width: 100%;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+
+/* ===========================
+   Address Section
+=========================== */
+.address-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.address-form input,
+.address-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.address-form textarea {
+  grid-column: span 2;
+  resize: none;
+  height: 90px;
+}
+
+.address-form input:focus,
+.address-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* ===========================
+   Order Summary - Improved Structure
+=========================== */
+.order-summary {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.order-summary-container {
+  display: grid;
+  grid-template-columns: 120px auto;
+  align-items: center;
+  background: #fffbe6;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumbnail {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-price,
+.total-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.stock-status {
+  font-size: 14px;
+  font-weight: bold;
+  color: green;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.quantity-control button {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.quantity-control button:hover {
+  background: #0056b3;
+}
+
+.quantity-control span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===========================
+   Payment Section
+=========================== */
+.payment-methods {
+  display: flex;
+  gap: 12px;
+}
+
+.payment-option {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+
+.payment-option:hover {
+  border-color: #007bff;
+}
+
+.payment-option.selected {
+  background: #007bff;
+  color: white;
+  box-shadow: 0px 3px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ===========================
+   Place Order Button
+=========================== */
+.confirm-order-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #28a745, #1f8e3e);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirm-order-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.confirm-order-btn:hover {
+  background: linear-gradient(135deg, #1f8e3e, #176d2c);
+}
+
+/* ===========================
+   Animations
+=========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

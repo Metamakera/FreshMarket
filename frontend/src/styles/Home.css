@@ -1,0 +1,347 @@
+/* General Home Page Styling */
+.home {
+  text-align: center;
+  background: url('../assets/bg2.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.animated-heading {
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease-out;
+}
+
+.sub-heading {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 10px 0 20px;
+}
+
+/* Call to Action Button */
+.cta-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: #ff4b2b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #e64a19;
+}
+
+/* Why Choose Us Section */
+/* ----- Why Choose Us Section ----- */
+.why-choose-us {
+  padding: 60px 10%;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  position: relative;
+}
+
+/* Features Container */
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Feature Card */
+.feature-card {
+  position: relative;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Card Hover Effect */
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Before and After Hover Effects
+.feature-card::before,
+.feature-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(45deg, #007bff, #ff6600);
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.feature-card::before {
+  top: 0;
+}
+
+.feature-card::after {
+  bottom: 0;
+}
+
+.feature-card:hover::before,
+.feature-card:hover::after {
+  height: 100%;
+  opacity: 0.1;
+} */
+
+/* Feature Image */
+.feature-card img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.feature-card:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Feature Title */
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Feature Description */
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effects for Title & Description */
+.feature-card:hover h3 {
+  color: #007bff;
+}
+
+.feature-card:hover p {
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-container {
+    gap: 30px;
+  }
+
+  .feature-card {
+    width: 280px;
+    padding: 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+}
+
+
+/* Featured Sellers */
+.featured-sellers {
+  padding: 60px 10%;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.sellers-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.seller-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.seller-card img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Reviews */
+.reviews {
+  padding: 60px 10%;
+  background: white;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.review-card {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.review-card p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.review-card h4 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Call to Action */
+.cta-section {
+  padding: 60px 10%;
+  background: linear-gradient(to right, #2b004e, hsl(214, 95%, 42%));
+  color: white;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+}
+.faq {
+  padding: 60px 20px;
+  background: #f9fbfc;
+  color: #222;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-question {
+  width: 100%;
+  background: #fff;
+  color: #1e3a8a;
+  border: none;
+  padding: 18px;
+  font-size: 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  position: relative;
+}
+
+.faq-question:hover {
+  background-color: #e2e8f0;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+.faq-item.active .faq-answer {
+  padding: 15px 20px;
+  max-height: 300px;
+}
+
+.faq-answer p,
+.faq-answer ul {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.faq-answer ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.faq-answer li {
+  margin-bottom: 8px;
+}

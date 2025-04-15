@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Remove global body styles */
+/* body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+} */
+
+/* Scoped authentication styles */
+.custom-auth-page {
+  font-family: 'Poppins', sans-serif;
+  /* background-color: #7227D5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.signin{
+  background-color: #5b1ca6;
+}
+/* 🔄 Full-Screen Loader */
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+}
+
+/* 🌊 Wave Loader */
+.wave-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wave-loader span {
+  display: inline-block;
+  width: 10px;
+  height: 30px;
+  margin: 0 3px;
+  background: #007bff;
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.wave-loader span:nth-child(1) { animation-delay: 0s; }
+.wave-loader span:nth-child(2) { animation-delay: 0.2s; }
+.wave-loader span:nth-child(3) { animation-delay: 0.4s; }
+.wave-loader span:nth-child(4) { animation-delay: 0.6s; }
+.wave-loader span:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.8); }
+}
+
+/* 🔍 Blur Effect */
+.blurred {
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+
+.custom-auth-wrapper {
+  width: 900px;
+  display: flex;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.custom-auth-container,
+.custom-image-section {
+  width: 50%;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.custom-auth-container {
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.custom-auth-box h2,
+.custom-register-box h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.custom-input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.custom-input-group input {
+  width: 100%;
+  padding: 10px 30px;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-input-group i {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #7227D5;
+}
+
+a {
+  display: block;
+  color: #7227D5;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.custom-auth-container button,
+.custom-register-box button {
+  background: #7227D5 !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), 
+  calc(100% - 15px) 100%, 15px 100%, 0 100%)!important;
+}
+
+.custom-auth-container button:hover,
+.custom-register-box button:hover {
+  background: #15012d !important;
+}
+
+
+p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.custom-seller-button {
+  background: none;
+  border: 2px solid #7227D5;
+  color: #7227D5;
+  margin-top: 10px;
+}
+
+.custom-seller-button:hover {
+  background: #7227D5;
+  color: white;
+}
+
+/* Image Overlay */
+.custom-image-section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.custom-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #001b1c, #4cd7d0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.custom-overlay h3 {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.custom-overlay p {
+  color: white;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.custom-register-box {
+  padding: 50px;
+  display: none;
+}
+
+/* Slide Effect */
+.custom-auth-wrapper.custom-signup-mode .custom-overlay {
+  transform: translateX(-100%);
+}
+
+.custom-auth-wrapper.custom-signup-mode .custom-register-box {
+  display: block;
+}
+
+.custom-auth-wrapper.custom-signup-mode .custom-auth-container {
+  transform: translateX(-100%);
+}
+.custom-input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+.custom-input-group input {
+  width: 100%;
+  padding: 0.75rem 2.5rem; /* Adjusted for icon and toggle */
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}

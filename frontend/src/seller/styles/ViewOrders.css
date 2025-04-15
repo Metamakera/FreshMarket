@@ -1,0 +1,280 @@
+/* === Base Container === */
+.view-orders {
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1280px;
+    margin: auto;
+    background: #f0f4f8;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  /* === Page Header === */
+  .view-orders h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #003366;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .view-orders h1::after {
+    content: '';
+    width: 70px;
+    height: 4px;
+    background: #007bff;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 4px;
+  }
+  
+  /* === Order Section === */
+  .order-section {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+    padding: 1.8rem;
+    overflow-x: auto;
+  }
+  
+  .order-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 6px solid #007bff;
+    padding-left: 1rem;
+  }
+  
+  /* === Table === */
+  table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th,
+  td {
+    padding: 14px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  tr:hover {
+    background-color: #f2f9ff;
+  }
+  
+  /* === Dropdown Styling === */
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .dropdown-button {
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .dropdown-button:hover {
+    background-color: #e9f2ff;
+    border-color: #007bff;
+  }
+  
+  .dropdown-chevron {
+    margin-left: 10px;
+    color: #007bff;
+  }
+  
+  .dropdown-options {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    z-index: 10;
+    display: none;
+  }
+  
+  .custom-dropdown:hover .dropdown-options {
+    display: block;
+  }
+  
+  .dropdown-option {
+    padding: 10px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown-option:hover {
+    background-color: #f1f9ff;
+  }
+  
+  /* Optional status coloring */
+  .status-pending {
+    background-color: #fff3cd !important;
+    color: #856404;
+  }
+  
+  .status-accepted {
+    background-color: #d1ecf1 !important;
+    color: #0c5460;
+  }
+  
+  .status-dispatched {
+    background-color: #d4edda !important;
+    color: #155724;
+  }
+  
+  .status-hold {
+    background-color: #f8d7da !important;
+    color: #721c24;
+  }
+  
+  /* === Empty Message === */
+  .empty-msg {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* === Loader === */
+  .loader {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* === Animation === */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* === Responsive Table === */
+  @media (max-width: 768px) {
+    table {
+      font-size: 0.85rem;
+      min-width: unset;
+      display: block;
+      overflow-x: auto;
+    }
+  
+    th, td {
+      white-space: nowrap;
+    }
+  }
+  /* The dropdown container */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the dropdown button */
+.dropdown-button {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+/* Style for the dropdown arrow */
+.dropdown-chevron {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the dropdown is open */
+.dropdown-button:focus .dropdown-chevron {
+  transform: rotate(180deg);
+}
+
+/* The dropdown options (hidden by default) */
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 100%;
+  display: none;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Show the dropdown when the button is focused */
+.custom-dropdown:focus-within .dropdown-options {
+  display: block;
+}
+
+/* Style for individual options */
+.dropdown-option {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect on options */
+.dropdown-option:hover {
+  background-color: #f1f1f1;
+}
+/* The dropdown options (hidden by default) */
+.dropdown-options {
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 100%;
+    display: none;
+    z-index: 1;
+    border-radius: 5px;
+    max-height: 200px; /* Set max-height to make it scrollable */
+    overflow-y: auto;  /* Enable vertical scrolling */
+  }
+  
+  /* Show the dropdown when the button is focused */
+  .custom-dropdown:focus-within .dropdown-options {
+    display: block;
+  }
